@@ -1,17 +1,15 @@
 import Image from 'next/image';
-import { motion, useScroll, useSpring } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function Home() {
-  const { scrollYProgress } = useScroll();
-  const opacity = useSpring(scrollYProgress, {
-    restSpeed: 0.5,
-    stiffness: 20,
-    damping: 10,
-  });
-
   return (
-    <motion.div style={{ opacity }} className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start"
+      >
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -21,14 +19,24 @@ export default function Home() {
           priority
         />
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Welcome to My Animal Portfolio
-          </h1>
-          <p className="text-xl text-zinc-700 dark:text-zinc-400">
-            Explore my passion for animals through stunning visuals and engaging descriptions.
-          </p>
+          <motion.h1
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1 }}
+            className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50"
+          >
+            Welcome to Our Animal Portfolio
+          </motion.h1>
+          <motion.p
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-xl text-gray-600 dark:text-gray-400"
+          >
+            Discover our diverse collection of animals through our modern and professional website.
+          </motion.p>
         </div>
-      </main>
-    </motion.div>
+      </motion.main>
+    </div>
   );
 }
