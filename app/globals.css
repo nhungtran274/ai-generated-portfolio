@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@layer components {
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-black dark:text-zinc-50;
+  }
 
-* {
-  font-family: var(--font-inter);
+  p {
+    @apply text-gray-600 dark:text-zinc-400;
+  }
 }
