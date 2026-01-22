@@ -1,5 +1,7 @@
-import { defineConfig } from 'next/config';
-
-export default defineConfig({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
-});
+  swcMinify: true,
+}
+
+module.exports = nextConfig
