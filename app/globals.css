@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-}
-
-@layer components {
-  .animal-card {
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .animal-card:hover {
-    transform: translateY(-5px);
-  }
+body {
+  scroll-behavior: smooth;
 }
