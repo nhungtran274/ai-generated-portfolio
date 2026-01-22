@@ -3,28 +3,15 @@ import { motion } from 'framer-motion'
 
 const variants = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 }
+  visible: { opacity: 1, y: 0 },
 }
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-100 p-8">
-      <motion.div initial="hidden" animate="visible" variants={variants} transition={{ duration: 0.5 }}>
-        <Header />
-      </motion.div>
-      <motion.div initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.2, duration: 0.5 }}>
-        <AboutSection />
-      </motion.div>
-      <motion.div initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.4, duration: 0.5 }}>
-        <ProjectsSection />
-      </motion.div>
-      <motion.div initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.6, duration: 0.5 }}>
-        <ContactSection />
-      </motion.div>
-      <motion.div initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.8, duration: 0.5 }}>
-        <Footer />
-      </motion.div>
-      <Button>Scroll Down</Button>
-    </main>
+    <motion.main className="min-h-screen p-8" initial="hidden" animate="visible" variants={variants}>
+      <motion.h1 className="text-4xl font-bold mb-8" variants={variants}>Welcome to My Animal Portfolio</motion.h1>
+      <motion.a href="/about" className="text-blue-500 underline mb-4" variants={variants}>About</motion.a>
+      <Button>Explore Animals</Button>
+    </motion.main>
   )
 }
