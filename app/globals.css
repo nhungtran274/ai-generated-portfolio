@@ -2,15 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: var(--font-geist-sans);
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 }
 
-a {
-  color: #333;
-  text-decoration: none;
-}
+@layer components {
+  .animal-card {
+    transition: transform 0.3s ease-in-out;
+  }
 
-a:hover {
-  text-decoration: underline;
+  .animal-card:hover {
+    transform: translateY(-5px);
+  }
 }
