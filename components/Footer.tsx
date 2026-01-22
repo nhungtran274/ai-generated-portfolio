@@ -1,22 +1,19 @@
+import Image from "next/image";
 import { motion } from "framer-motion";
 
-const footerVariants = {
-  hidden: { opacity: 0, y: 50 },
+const variants = {
+  hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 
 export default function Footer() {
   return (
-    <motion.footer
-      variants={footerVariants}
-      initial="hidden"
-      animate="visible"
-      transition={{ duration: 1 }}
-      className="bg-zinc-900 text-white py-4 text-center"
-    >
-      <p className="text-sm">
-        © 2023 Animal Portfolio. All rights reserved.
-      </p>
-    </motion.footer>
+    <footer className="bg-white dark:bg-black shadow-md p-4 mt-auto">
+      <motion.div variants={variants} transition={{ duration: 0.5 }}>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          © 2023 My Animal Portfolio. All rights reserved.
+        </p>
+      </motion.div>
+    </footer>
   );
 }
