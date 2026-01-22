@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  scroll-behavior: smooth;
+@layer components {
+  h1 {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  p {
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  .animal-card {
+    animation: scaleUp 1s ease-in-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }
