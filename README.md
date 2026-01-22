@@ -1,29 +1,30 @@
-# Animal Portfolio Website
+# Animal Portfolio
 
-Welcome to our Animal Portfolio website! This is a simple yet modern website showcasing various animals from around the world. The site features smooth scrolling animations and a clean design.
+Welcome to my personal portfolio about animals!
 
-## Getting Started
+## Setup
 
-1. **Clone the repository**:
+1. Clone the repository:
    bash
    git clone https://github.com/yourusername/animal-portfolio.git
    cd animal-portfolio
    
-2. **Install dependencies**:
+2. Install dependencies:
    bash
    npm install
    
-3. **Run the development server**:
+3. Start the development server:
    bash
    npm run dev
    
-Open your browser and navigate to `http://localhost:3000` to see the website in action.
+4. Open your browser and visit `http://localhost:3000`.
 
-## Technologies Used
+## Features
 
-- Next.js
-- React
-- Tailwind CSS
-- Framer Motion for animations
+- Modern and professional design using Tailwind CSS.
+- Animations on scroll using Framer Motion.
+- Responsive layout for various devices.
 
-Feel free to customize and expand this template to fit your needs!
+## Contributing
+
+Feel free to contribute to this project by submitting issues or pull requests.
