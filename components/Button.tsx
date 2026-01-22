@@ -1,19 +1,9 @@
-import { motion } from 'framer-motion'
+import { ButtonHTMLAttributes } from 'react'
 
-const buttonVariants = {
-  hidden: { scale: 0.9 },
-  visible: { scale: 1 },
-}
-
-export default function Button({ children }: { children: React.ReactNode }) {
+export default function Button({ children, className, ...props }: ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <motion.button
-      whileHover="visible"
-      whileTap="hidden"
-      variants={buttonVariants}
-      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-    >
+    <button className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 ${className}`} {...props}>
       {children}
-    </motion.button>
+    </button>
   )
 }
