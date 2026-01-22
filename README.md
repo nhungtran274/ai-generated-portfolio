@@ -1,13 +1,12 @@
 # Animal Portfolio
 
-Welcome to my personal portfolio about animals!
+This is a modern and professional portfolio website about animals. It uses Next.js, Tailwind CSS, and Framer Motion for animations.
 
-## Setup
+## Getting Started
 
 1. Clone the repository:
    bash
    git clone https://github.com/yourusername/animal-portfolio.git
-   cd animal-portfolio
    
 2. Install dependencies:
    bash
@@ -17,14 +16,10 @@ Welcome to my personal portfolio about animals!
    bash
    npm run dev
    
-4. Open your browser and visit `http://localhost:3000`.
+4. Open your browser and visit `http://localhost:3000` to see the portfolio.
 
-## Features
+## Technologies Used
 
-- Modern and professional design using Tailwind CSS.
-- Animations on scroll using Framer Motion.
-- Responsive layout for various devices.
-
-## Contributing
-
-Feel free to contribute to this project by submitting issues or pull requests.
+- **Next.js**: A React framework for building server-rendered applications.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+- **Framer Motion**: A React animation library for creating smooth transitions and interactions.
