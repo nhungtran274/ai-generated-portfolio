@@ -1,27 +1,30 @@
+import Button from '@/components/Button'
+import { motion } from 'framer-motion'
+
+const variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 }
+}
+
 export default function Home() {
   return (
-    <main className="min-h-screen p-8">
-      <Header />
-      <section className="mt-8">
-        <h2 className="text-3xl font-bold mb-4">Animals</h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <li className="bg-white shadow-md p-4 rounded-lg">
-            <img src="/images/dog.jpg" alt="Dog" className="w-full h-48 object-cover mb-4" />
-            <h3 className="text-xl font-semibold">Dog</h3>
-            <p className="text-gray-600">A loyal companion.</p>
-          </li>
-          <li className="bg-white shadow-md p-4 rounded-lg">
-            <img src="/images/cat.jpg" alt="Cat" className="w-full h-48 object-cover mb-4" />
-            <h3 className="text-xl font-semibold">Cat</h3>
-            <p className="text-gray-600">Independent and curious.</p>
-          </li>
-          <li className="bg-white shadow-md p-4 rounded-lg">
-            <img src="/images/bird.jpg" alt="Bird" className="w-full h-48 object-cover mb-4" />
-            <h3 className="text-xl font-semibold">Bird</h3>
-            <p className="text-gray-600">Versatile and intelligent.</p>
-          </li>
-        </ul>
-      </section>
+    <main className="min-h-screen bg-gray-100 p-8">
+      <motion.div initial="hidden" animate="visible" variants={variants} transition={{ duration: 0.5 }}>
+        <Header />
+      </motion.div>
+      <motion.div initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.2, duration: 0.5 }}>
+        <AboutSection />
+      </motion.div>
+      <motion.div initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.4, duration: 0.5 }}>
+        <ProjectsSection />
+      </motion.div>
+      <motion.div initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.6, duration: 0.5 }}>
+        <ContactSection />
+      </motion.div>
+      <motion.div initial="hidden" animate="visible" variants={variants} transition={{ delay: 0.8, duration: 0.5 }}>
+        <Footer />
+      </motion.div>
+      <Button>Scroll Down</Button>
     </main>
-  );
+  )
 }
