@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { motion } from "framer-motion";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Animal Portfolio",
-  description: "A collection of unique animal stories.",
+  description: "A modern and professional portfolio about animals",
 };
 
 export default function RootLayout({
@@ -28,14 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="min-h-screen bg-zinc-50 dark:bg-black"
-        >
-          {children}
-        </motion.div>
+        {children}
       </body>
     </html>
   );
