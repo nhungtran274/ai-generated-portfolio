@@ -1,33 +1,34 @@
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface AnimalCardProps {
+  imageUrl: string;
   name: string;
-  imageSrc: string;
   description: string;
 }
 
-export default function AnimalCard({ name, imageSrc, description }: AnimalCardProps) {
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 },
+};
+
+export default function AnimalCard({ imageUrl, name, description }: AnimalCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      className="w-full max-w-sm overflow-hidden rounded-lg border border-gray-200 shadow-md dark:border-gray-700 dark:shadow-lg"
+      variants={fadeInLeft}
+      transition={{ duration: 0.5 }}
+      className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center"
     >
-      <a href="#" className="block h-full">
-        <Image
-          src={imageSrc}
-          alt={name}
-          className="object-cover"
-          width={300}
-          height={200}
-        />
-        <div className="p-4">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
-          <p className="text-base font-normal text-gray-700 dark:text-gray-400">{description}</p>
-        </div>
-      </a>
+      <Image
+        src={imageUrl}
+        alt={name}
+        width={200}
+        height={200}
+        className="rounded mb-4"
+      />
+      <h2 className="text-2xl font-bold mb-2">{name}</h2>
+      <p className="text-gray-600">{description}</p>
     </motion.div>
   );
 }
