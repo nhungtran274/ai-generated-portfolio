@@ -1,30 +1,21 @@
 # Animal Portfolio
 
-This is a modern and professional animal portfolio website built using Next.js and Tailwind CSS. The site features smooth animations on scroll and a clean design.
+This is a personal portfolio website showcasing unique animals and their fascinating stories. Built using Next.js, TypeScript, and Tailwind CSS.
 
 ## Getting Started
 
-1. Clone the repository:
-      git clone https://github.com/yourusername/animal-portfolio.git
+1. **Install Dependencies**
+   bash
+   npm install
    
-
-2. Install dependencies:
-      npm install
+2. **Run Development Server**
+   bash
+   npm run dev
    
-
-3. Start the development server:
-      npm run dev
+3. **Build for Production**
+   bash
+   npm run build
    
-
-4. Open your browser and navigate to `http://localhost:3000`.
-
-## Technologies Used
-
-- Next.js
-- Tailwind CSS
-- Framer Motion for animations
-- TypeScript
-
-## Customization
-
-Feel free to customize the content and styling according to your needs.
+4. **Start Production Server**
+   bash
+   npm run start
